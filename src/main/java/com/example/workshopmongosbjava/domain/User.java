@@ -1,6 +1,8 @@
 package com.example.workshopmongosbjava.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
@@ -15,6 +17,8 @@ public class User implements Serializable {
 	private String id;
 	private String name;
 	private String email;
+	
+	private List<Post> posts = new ArrayList<>();
 	
 	public User() {
 	}
@@ -48,6 +52,11 @@ public class User implements Serializable {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+//	public Post getPosts() {
+//		return posts;
+//	}
+
 
 	@Override
 	public int hashCode() {
